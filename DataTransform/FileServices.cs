@@ -37,7 +37,11 @@ namespace DataTransform
         {
             OpenFileDialog fileDialog = new OpenFileDialog { Multiselect = false };
             fileDialog.FileName = fileName;
-            fileDialog.InitialDirectory = @"../../" + AppDomain.CurrentDomain.BaseDirectory;
+
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string path = baseDirectory.Replace(@"DataTransform\bin\Debug\", "");
+
+            fileDialog.InitialDirectory = path;
 
             return fileDialog.ShowDialog() == DialogResult.Cancel
                 ? null
