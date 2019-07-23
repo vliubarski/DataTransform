@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataTransform.csproj" />
+    <ProjectReference Include="..\DataTransform\DataTransform.csproj" />
   </ItemGroup>
 
 </Project>
